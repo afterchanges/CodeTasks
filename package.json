@@ -1,0 +1,33 @@
+{
+	"name": "code-tasks",
+	"displayName": "Code Tasks",
+	"description": "Track and manage your TODOs and FIXMEs in VS Code",
+	"version": "0.0.1",
+	"publisher": "your-publisher-name",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.showCodeTasks",
+				"title": "Show CodeTasks Panel"
+			}
+		]
+	},
+	"activationEvents": ["*"],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vscode": "^1.1.37"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.41",
+		"typescript": "^4.1.5"
+	}
+}
